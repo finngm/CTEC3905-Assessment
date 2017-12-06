@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+
+	background: url("../images/background.png") no-repeat fixed;
+	background-size: cover;
+}
+
+.demoList {
+	margin: 0;
+	list-style: none;
+	
+	background: #ed7e3d;
+	
+	display: flex;
+	padding: 0;
+}
+
+.demoList a:hover {
+	background: skyblue;
+}
+
+.demoList a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 1em;
+}
+
+main {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.planet {
+	transition: all 0.6s;
+	position: absolute;
+}
+
+.planet:hover {
+	transform: scale(1.2);
+}
+
+#sun {
+	left: -150px;
+}
