@@ -1,47 +1,54 @@
 body {
 	margin: 0;
-
+	line-height: 1.5;
+	
 	background: url("../images/background.png") no-repeat fixed;
 	background-size: cover;
 }
 
-.demoList {
-	margin: 0;
+.topNav {
+	height: 44px;
+	width: 100%;
+	
 	list-style: none;
 	
-	background: #ed7e3d;
+	background: #696969;
 	
 	display: flex;
+	align-items: center;
 	padding: 0;
+	
+	letter-spacing: 1px;
+	font-family: "Segoe UI",Arial,sans-serif;
+	font-size: 17px;
+	
+	position: fixed;
 }
 
-.demoList a:hover {
-	background: skyblue;
+.topNav a:hover {
+	background: #c18ebf;
 }
 
-.demoList a {
+.topNav a {
 	text-decoration: none;
 	color: white;
-	display: block;
-	padding: 1em;
+	
+	padding: 10px 15px 9px 15px;
 }
 
 main {
-	width: 100%;
+	height: 100vh;
 
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .planet {
-	transition: all 0.6s;
-	position: absolute;
+	transition: all 0.3s;
 }
 
 .planet:hover {
-	transform: scale(1.2);
-}
-
-#sun {
-	left: -150px;
+	transform: scale(1.3);
 }
