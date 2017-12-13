@@ -1,9 +1,16 @@
+html, body {
+	height: 100%;
+}
+
 body {
+
 	margin: 0;
 	line-height: 1.5;
 	
 	background: url("../images/background.png") no-repeat fixed;
 	background-size: cover;
+
+	font-family: "HP Simplified","Segoe UI",Arial,sans-serif;
 }
 
 /* Top Section */
@@ -22,7 +29,6 @@ body {
 	padding: 0;
 
 	letter-spacing: 1px;
-	font-family: "HP Simplified","Segoe UI",Arial,sans-serif;
 	font-size: 17px;
 }
 
@@ -63,10 +69,15 @@ main section {
 
 /* Bottom Section */
 
+.infoSection {
+	height: 42.9%;
+	box-shadow: 0 -2px 5px 0 rgba(150,150,150,0.23);
+}
+
 .infoPane {
 	float: left;
-	height: 100%;
 	text-align: center;
+	transition: all 0.5s;
 }
 
 #info1 {
@@ -85,7 +96,8 @@ main section {
 }
 
 p {
-	margin: 3em 0 3em 0;
+	/*margin: 3em 0 3em 0;*/
+	margin: 0;
 }
 
 /* Planet Adjustment */
