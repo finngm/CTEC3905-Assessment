@@ -7,25 +7,24 @@
 	infoPane3.style.cursor = "auto";
 
 	function toggleInfoPane(pane) {
-		if (pane.id == 'info1' && pane.style.width != "80%") {
+		if (pane.id == 'info1' && pane.style.width != "90%") {
 			setInfoWidths(infoPane1, infoPane2, infoPane3);
 			setCursorStyle(infoPane1, infoPane2, infoPane3);
 		}
-		else if (pane.id == 'info2' && pane.style.width != "80%") {
+		else if (pane.id == 'info2' && pane.style.width != "90%") {
 			setInfoWidths(infoPane2, infoPane1, infoPane3);
 			setCursorStyle(infoPane2, infoPane1, infoPane3);
 		}
-		else if (pane.id == 'info3' && pane.style.width != "80%") {
+		else if (pane.id == 'info3' && pane.style.width != "90%") {
 			setInfoWidths(infoPane3, infoPane1, infoPane2);
 			setCursorStyle(infoPane3, infoPane1, infoPane2);
 		}
-
 	}
 
 	function setInfoWidths(widePane, smallPane1, smallPane2) {
-		widePane.style.width = "80%";
-		smallPane1.style.width = "10%";
-		smallPane2.style.width = "10%";
+		widePane.style.width = "90%";
+		smallPane1.style.width = "5%";
+		smallPane2.style.width = "5%";
 	}
 
 	function setCursorStyle(autoPane, pointerPane1, pointerPane2) {

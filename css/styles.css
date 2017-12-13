@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+	overflow: hidden;
 }
 
 body {
@@ -11,22 +12,18 @@ body {
 	background-size: cover;
 
 	font-family: "HP Simplified","Segoe UI",Arial,sans-serif;
+	color: white;
 }
 
 /* Top Section */
 
 .topNav {
-	height: 44px;
-	width: auto;
-
 	list-style: none;
 
 	background: #404040;
 	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
 
 	display: flex;
-	align-items: center;
-	padding: 0;
 
 	letter-spacing: 1px;
 	font-size: 17px;
@@ -35,7 +32,6 @@ body {
 .topNav a {
 	text-decoration: none;
 	color: white;
-
 	padding: 10px 17px 9px 17px;
 }
 
@@ -55,7 +51,7 @@ main {
 	justify-content: space-around;
 }
 
-main section {
+main div {
 	margin: 0 1em 0 1em;
 }
 
@@ -70,73 +66,82 @@ main section {
 /* Bottom Section */
 
 .infoSection {
-	height: 42.9%;
+	height: 50vh;
 	box-shadow: 0 -2px 5px 0 rgba(150,150,150,0.23);
 }
 
 .infoPane {
+	height: 100%;
 	float: left;
-	text-align: center;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
 	transition: all 0.5s;
+}
+
+.infoText {
+	background: #3498db;
+	width: 30%;
+	height: 50%;
+	
+	text-align: center;
 }
 
 #info1 {
 	background: #404040;
-	width: 10%;
+	width: 5%;
 }
 
 #info2 {
 	background: #505050;
-	width: 10%;
+	width: 5%;
 }
 
 #info3 {
 	background: #606060;
-	width: 80%;
-}
-
-p {
-	/*margin: 3em 0 3em 0;*/
-	margin: 0;
+	width: 90%;
 }
 
 /* Planet Adjustment */
-main section:first-child {
-	width: 280px;
+
+main div:first-child {
+	width: 280px;	/* sun */
 }
 
-main section:nth-child(2) {
-	width: 80px;
+main div:nth-child(2) {
+	width: 80px;	/* mercury */
 }
 
-main section:nth-child(3) {
-	width: 100px;
+main div:nth-child(3) {
+	width: 100px;	/* venus */
 }
 
-main section:nth-child(4) {
-	width: 110px;
+main div:nth-child(4) {
+	width: 110px;	/* earth */
 }
 
-main section:nth-child(5) {
-	width: 92px;
+main div:nth-child(5) {
+	width: 90px;	/* mars */
 }
 
-main section:nth-child(6) {
-	width: 190px;
+main div:nth-child(6) {
+	width: 190px;	/* jupiter */
 }
 
-main section:nth-child(7) {
-	width: 320px;
+main div:nth-child(7) {
+	width: 320px;	/* saturn */
 }
 
-main section:nth-child(8) {
-	width: 150px;
+main div:nth-child(8) {
+	width: 150px;	/* uranus */
 }
 
-main section:nth-child(9) {
-	width: 144px;
+main div:nth-child(9) {
+	width: 142px;	/* neptune */
 }
 
-main section:nth-child(10) {
-	width: 56px;
+main div:nth-child(10) {
+	width: 56px;	/* pluto */
 }
