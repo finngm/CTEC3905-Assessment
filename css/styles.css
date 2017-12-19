@@ -1,10 +1,9 @@
 html, body {
 	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 body {
-
 	margin: 0;
 	line-height: 1.5;
 	
@@ -16,7 +15,6 @@ body {
 }
 
 /* Top Section */
-
 .topNav {
 	list-style: none;
 
@@ -24,6 +22,8 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
 
 	display: flex;
+	position: sticky;
+	top: 0;
 
 	letter-spacing: 1px;
 	font-size: 17px;
@@ -68,40 +68,63 @@ main div {
 .infoSection {
 	height: 50vh;
 	box-shadow: 0 -2px 5px 0 rgba(150,150,150,0.23);
+
+	font-family: "Iceland","HP Simplified",Arial,sans-serif;
+}
+
+#info1 {
+	background: #404040;
+	width: 8%;
+}
+
+#info2 {
+	background: #505050;
+	width: 8%;
+}
+
+#info3 {
+	background: #606060;
+	width: 84%;
 }
 
 .infoPane {
 	height: 100%;
 	float: left;
 	
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	
 	transition: all 0.5s;
+	overflow: hidden;		/* prevents the hidden objects from being clicked */
 }
 
-.infoText {
-	background: #3498db;
-	width: 30%;
-	height: 50%;
-	
+.infoTitle {
+	font-size: 25px;
 	text-align: center;
 }
 
-#info1 {
-	background: #404040;
-	width: 5%;
+.infoTitle p {
+	margin: 5px 0 5px 0;
 }
 
-#info2 {
-	background: #505050;
-	width: 5%;
+.infoMain {
+	height: 83%;
+
+	display: flex;
+	opacity: 0;
+
+	justify-content: space-around;
+	align-items: flex-start;
+	transition: all 0.3s;
 }
 
-#info3 {
-	background: #606060;
-	width: 90%;
+.infoPlanet {
+	align-self: center;
+}
+
+.infoFact2 {
+	align-self: flex-end;
+}
+
+#futureMain {
+	opacity: 1;
 }
 
 /* Planet Adjustment */
@@ -131,7 +154,7 @@ main div:nth-child(6) {
 }
 
 main div:nth-child(7) {
-	width: 320px;	/* saturn */
+	width: 330px;	/* saturn */
 }
 
 main div:nth-child(8) {
