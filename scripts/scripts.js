@@ -1,14 +1,32 @@
 (function(){
+	let jsonObj = JSON.parse(jsonPlanets);
+
+	// the three information panes & their cursor styles
 	let infoPane1 = document.getElementById("info1");
+	infoPane1.style.cursor = "pointer";
 	let infoPane2 = document.getElementById("info2");
+	infoPane2.style.cursor = "pointer";
 	let infoPane3 = document.getElementById("info3");
+	infoPane3.style.cursor = "auto";
+
+	// the information within the panes (excluding the title)
 	let pastMain = document.getElementById("pastMain");
 	let presentMain = document.getElementById("presentMain");
 	let futureMain = document.getElementById("futureMain");
 
-	infoPane1.style.cursor = "pointer";
-	infoPane2.style.cursor = "pointer";
-	infoPane3.style.cursor = "auto";
+	// the individual parts of the information
+	let pastImage = document.getElementById("pastImage");
+	let pastFact1 = document.getElementById("pastFact1");
+	let pastFact2 = document.getElementById("pastFact2");
+	let pastFact3 = document.getElementById("pastFact3");
+	let presentImage = document.getElementById("presentImage");
+	let presentFact1 = document.getElementById("presentFact1");
+	let presentFact2 = document.getElementById("presentFact2");
+	let presentFact3 = document.getElementById("presentFact3");
+	let futureImage = document.getElementById("futureImage");
+	let futureFact1 = document.getElementById("futureFact1");
+	let futureFact2 = document.getElementById("futureFact2");
+	let futureFact3 = document.getElementById("futureFact3");
 
 	function toggleInfoPane(pane) {
 		if (pane.id == 'info1' && pane.style.width != "84%") {
@@ -45,6 +63,34 @@
 		pointerPane1.style.cursor = "pointer";
 		pointerPane2.style.cursor = "pointer";
 	}
+
+	function switchPlanetInfo(planet) {
+		pastImage.src = jsonObj[planet].past.image;
+		pastFact1.innerHTML = jsonObj[planet].past.fact1;
+		pastFact2.innerHTML = jsonObj[planet].past.fact2;
+		pastFact3.innerHTML = jsonObj[planet].past.fact3;
+
+		presentImage.src = jsonObj[planet].present.image;
+		presentFact1.innerHTML = jsonObj[planet].present.fact1;
+		presentFact2.innerHTML = jsonObj[planet].present.fact2;
+		presentFact3.innerHTML = jsonObj[planet].present.fact3;
+
+		futureImage.src = jsonObj[planet].future.image;
+		futureFact1.innerHTML = jsonObj[planet].future.fact1;
+		futureFact2.innerHTML = jsonObj[planet].future.fact2;
+		futureFact3.innerHTML = jsonObj[planet].future.fact3;
+	}
+
+	sun.addEventListener("click", function(){switchPlanetInfo('sun')});
+	mercury.addEventListener("click", function(){switchPlanetInfo('mercury')});
+	venus.addEventListener("click", function(){switchPlanetInfo('venus')});
+	earth.addEventListener("click", function(){switchPlanetInfo('earth')});
+	mars.addEventListener("click", function(){switchPlanetInfo('mars')});
+	jupiter.addEventListener("click", function(){switchPlanetInfo('jupiter')});
+	saturn.addEventListener("click", function(){switchPlanetInfo('saturn')});
+	uranus.addEventListener("click", function(){switchPlanetInfo('uranus')});
+	neptune.addEventListener("click", function(){switchPlanetInfo('neptune')});
+	pluto.addEventListener("click", function(){switchPlanetInfo('pluto')});
 
 	infoPane1.addEventListener("click",  function(){toggleInfoPane(infoPane1)});
 	infoPane2.addEventListener("click",  function(){toggleInfoPane(infoPane2)});

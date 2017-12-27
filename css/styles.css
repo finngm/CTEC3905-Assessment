@@ -22,7 +22,7 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
 
 	display: flex;
-	position: sticky;
+	/*position: sticky;*/
 	top: 0;
 
 	letter-spacing: 1px;
