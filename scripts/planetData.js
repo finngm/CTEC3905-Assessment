@@ -74,9 +74,9 @@ let jsonPlanets = `
     },
     "future": {
       "image":"images/earth.svg",
-      "fact1":"Future Earth Fact #1",
-      "fact2":"Future Earth Fact #2",
-      "fact3":"Future Earth Fact #3"
+      "fact1":"50,000 Years - The current interglacial period ends sending the Earth back into a glacial period of the current ice age, regardless of the effects of anthropogenic global warming.",
+      "fact2":"100,000 Years - Earth will likely have undergone a supervolcanic eruption large enough to erupt 400 km3 of magma.",
+      "fact3":"500,000 Years - Earth will likely have been hit by an asteroid of roughly 1 km in diameter, assuming it cannot be averted."
     }
   },
   "mars": { 
