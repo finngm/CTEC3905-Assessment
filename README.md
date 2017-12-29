@@ -5,15 +5,16 @@ Repository for the Front End Web Development Assignment
 
 The first design for the site is similar to the final product but there were changes:
 ![draft design 1](./images/draftDesign1.png)
+
 For tablet and desktops the planets would be laid out horizontally in the middle of the screen where the user could click on a planet to change the text at the bottom of the page.
 
 The three sections at the bottom were going to display the information at the same time but part way through development I realised that shortening two of the panels allowed more information to be displayed on the one larger panel. This also allowed me to add a transition affect when selecting panels so the display is less jarring.
 
-![final design](./images/finalDesign1.png)
+![final design](./images/finalDesign.png)
 
 It was near the end of the development that I decided the navigation bar was unnecessary when the planets were shown. For smaller screens however, when the planets were to small and wouldn't fit I had the navigation bar appear. For mobile phones the navigation bar was shortened into a dropdown menu so users wouldn't have to try and press on small buttons.
 
-![phone design](./images/phoneDesign1.png)
+![phone design](./images/phoneDesign.png)
 
 For mobile phones the idea was to display the selected planet in the middle of the screen and allow the user to switch between the content using a dropdown menu. This was the first and only design for it as it worked well when in use. Bigger mobile phones can use the horizontal navigation menu instead of the dropdown.
 
