@@ -16,26 +16,45 @@ body {
 
 /* Top Section */
 .topNav {
-	list-style: none;
-
 	background: #404040;
 	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
 
 	display: flex;
-	/*position: sticky;*/
+	position: sticky;
 	top: 0;
 
 	letter-spacing: 1px;
 	font-size: 12px;
 }
 
-.topNav a {
-	text-decoration: none;
-	color: white;
-	padding: 8px 8px 7px 8px;
+nav ul {
+	margin: 0;
+  	padding: 0;
+	list-style-type: none;
 }
 
-.topNav a:hover {
+ul ul {
+	display: none;
+	position: absolute;
+}
+
+ul li:hover ul {
+	display: block;
+	background: #404040;
+	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
+	z-index: 999;
+}
+
+li a {
+	display: flex;
+	justify-content: center;
+
+	text-decoration: none;
+	color: white;
+	padding: 11px 20px 10px 20px;
+}
+
+li a:hover {
 	background: #e74c3c;
 	box-shadow: 0px 1px 2px 0px #e74c3c;
 }
@@ -48,7 +67,6 @@ main {
 
 	display: flex;
 	align-items: center;
-	/*justify-content: space-around;*/
 }
 
 main div {
@@ -56,11 +74,12 @@ main div {
 }
 
 .planet {
-	transition: all 0.3s;
+	transition: all 0.3s
 }
 
 .planet:hover {
 	transform: scale(1.2);
+	cursor: pointer;
 }
 
 /* Bottom Section */
@@ -92,11 +111,11 @@ main div {
 	float: left;
 	
 	transition: all 0.5s;
-	overflow: hidden;		/* prevents the hidden objects from being clicked */
+	overflow: hidden;		/* prevents the hidden planet images from being clicked */
 }
 
 .infoTitle {
-	font-size: 10px;
+	font-size: 8px;
 	text-align: center;
 }
 
@@ -125,7 +144,7 @@ main div {
 	align-self: center;
 	margin-left: 1%;
 	margin-right: 1%;
-	width: 100px;
+	width: 50px;
 }
 
 .infoFact2 {
@@ -136,21 +155,35 @@ main div {
 	opacity: 1;
 }
 
+/**************************/
 /* Responsive Breakpoints */
+/**************************/
 
-@media screen and (min-width: 450px) {
-  	/* Top Section */
-	.topNav {
-		font-size: 12px;
+/* resizes the main info planet image */
+@media screen and (min-width: 375px) {
+	/*Bottom Section */
+	.infoPlanet {
+		width: 70px;
 	}
+}
 
-	.topNav a {
-		padding: 8px 8px 7px 8px;
-	}
-
+/* resizes the main info planet image & main info title*/
+@media screen and (min-width: 400px) {
 	/* Bottom Section */
 	.infoTitle {
-		font-size: 12px;
+		font-size: 10px;
+	}
+
+	.infoPlanet {
+		width: 90px;
+	}
+}
+
+/* resizes the main info planet image, main info title & main info facts */
+@media screen and (min-width: 450px) {
+	/* Bottom Section */
+	.infoTitle {
+		font-size: 11px;
 	}
 
 	.infoMain {
@@ -164,14 +197,62 @@ main div {
 	}
 }
 
+/* top navigation bar is changed from a dropdown menu to a horizontal selection */
+@media screen and (min-width: 575px) {
+	/* Top Section */
+	.topNav {
+		height: 33px;
+		box-shadow: none;
+		background: none;
+	}
+
+	ul ul {
+		display: flex;
+	}
+
+	ul li:hover ul {
+		display: flex;
+	}
+
+	ul {
+		width: 100%;
+		background: #404040;
+		box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
+	}
+
+	li a {
+		padding: 8px 8px 7px 8px;
+	}
+
+	/* hide menu icon*/
+	#navMenu {
+		display: none;
+	}
+}
+
+/* resizes the top navigation bar size */
+@media screen and (min-width: 650px) {
+	.topNav {
+		height: 38px;
+	}
+
+	li a {
+		padding: 9px 8px 8px 9px;
+		font-size: 14px;
+	}
+}
+
+/* resizes the top navigation bar size */
+/* resizes the main info planet image, main info title & main info facts */
 @media screen and (min-width: 750px) {
   	/* Top Section */
 	.topNav {
-		font-size: 15px;
+		height: 43px;
 	}
 
-	.topNav a {
-		padding: 10px 10px 9px 10px;
+	li a {
+		padding: 10px 11px 9px 11px;
+		font-size: 16px;
 	}
 
 	/* Bottom Section */
@@ -190,14 +271,17 @@ main div {
 	}
 }
 
+/* resizes the top navigation bar size */
+/* resizes the main info planet image, main info title & main info facts */
 @media screen and (min-width: 950px) {
   	/* Top Section */
-	.topNav {
-		font-size: 17px;
+  	.topNav {
+		height: 44px;
 	}
 
-	.topNav a {
-		padding: 10px 17px 9px 17px;
+	li a {
+		padding: 10px 19px 9px 19px;
+		font-size: 17px;
 	}
 
 	/* Bottom Section */
@@ -216,44 +300,43 @@ main div {
 	}
 }
 
-/* Planet Adjustment */
-
+/* Planet Sizes */
 main div:first-child {
-	width: 280px;	/* sun */
+	width: 320px;	/* sun */
 }
 
 main div:nth-child(2) {
-	width: 80px;	/* mercury */
+	width: 120px;	/* mercury */
 }
 
 main div:nth-child(3) {
-	width: 100px;	/* venus */
+	width: 140px;	/* venus */
 }
 
 main div:nth-child(4) {
-	width: 110px;	/* earth */
+	width: 150px;	/* earth */
 }
 
 main div:nth-child(5) {
-	width: 90px;	/* mars */
+	width: 130px;	/* mars */
 }
 
 main div:nth-child(6) {
-	width: 190px;	/* jupiter */
+	width: 230px;	/* jupiter */
 }
 
 main div:nth-child(7) {
-	width: 330px;	/* saturn */
+	width: 370px;	/* saturn */
 }
 
 main div:nth-child(8) {
-	width: 150px;	/* uranus */
+	width: 190px;	/* uranus */
 }
 
 main div:nth-child(9) {
-	width: 142px;	/* neptune */
+	width: 182px;	/* neptune */
 }
 
 main div:nth-child(10) {
-	width: 56px;	/* pluto */
+	width: 96px;	/* pluto */
 }
