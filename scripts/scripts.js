@@ -1,6 +1,9 @@
 (function(){
 	let jsonObj = JSON.parse(jsonPlanets);
 
+	// the image of the planet displayed when the screen < 650px
+	let smallScreenPlanet = document.getElementById("smallPlanet");
+
 	// the three information panes & their cursor styles
 	let infoPane1 = document.getElementById("info1");
 	infoPane1.style.cursor = "pointer";
@@ -65,6 +68,8 @@
 	}
 
 	function switchPlanetInfo(planet) {
+		smallScreenPlanet.src = jsonObj[planet].present.image;
+
 		pastImage.src = jsonObj[planet].past.image;
 		pastFact1.innerHTML = jsonObj[planet].past.fact1;
 		pastFact2.innerHTML = jsonObj[planet].past.fact2;
@@ -81,6 +86,23 @@
 		futureFact3.innerHTML = jsonObj[planet].future.fact3;
 	}
 
+	infoPane1.addEventListener("click",  function(){toggleInfoPane(infoPane1)});
+	infoPane2.addEventListener("click",  function(){toggleInfoPane(infoPane2)});
+	infoPane3.addEventListener("click",  function(){toggleInfoPane(infoPane3)});
+
+	// navigation Menu buttons
+	navSun.addEventListener("click", function(){switchPlanetInfo('sun')});
+	navMercury.addEventListener("click", function(){switchPlanetInfo('mercury')});
+	navVenus.addEventListener("click", function(){switchPlanetInfo('venus')});
+	navEarth.addEventListener("click", function(){switchPlanetInfo('earth')});
+	navMars.addEventListener("click", function(){switchPlanetInfo('mars')});
+	navJupiter.addEventListener("click", function(){switchPlanetInfo('jupiter')});
+	navSaturn.addEventListener("click", function(){switchPlanetInfo('saturn')});
+	navUranus.addEventListener("click", function(){switchPlanetInfo('uranus')});
+	navNeptune.addEventListener("click", function(){switchPlanetInfo('neptune')});
+	navPluto.addEventListener("click", function(){switchPlanetInfo('pluto')});
+
+	// planet buttons
 	sun.addEventListener("click", function(){switchPlanetInfo('sun')});
 	mercury.addEventListener("click", function(){switchPlanetInfo('mercury')});
 	venus.addEventListener("click", function(){switchPlanetInfo('venus')});
@@ -91,9 +113,5 @@
 	uranus.addEventListener("click", function(){switchPlanetInfo('uranus')});
 	neptune.addEventListener("click", function(){switchPlanetInfo('neptune')});
 	pluto.addEventListener("click", function(){switchPlanetInfo('pluto')});
-
-	infoPane1.addEventListener("click",  function(){toggleInfoPane(infoPane1)});
-	infoPane2.addEventListener("click",  function(){toggleInfoPane(infoPane2)});
-	infoPane3.addEventListener("click",  function(){toggleInfoPane(infoPane3)});
 
 }());

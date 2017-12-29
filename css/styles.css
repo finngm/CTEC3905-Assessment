@@ -25,6 +25,8 @@ body {
 
 	letter-spacing: 1px;
 	font-size: 12px;
+
+	z-index: 999;
 }
 
 nav ul {
@@ -42,7 +44,6 @@ ul li:hover ul {
 	display: block;
 	background: #404040;
 	box-shadow: 0 2px 5px 0 rgba(150,150,150,0.23);
-	z-index: 999;
 }
 
 li a {
@@ -60,21 +61,33 @@ li a:hover {
 }
 
 /* Middle Section */
-
 main {
 	height: 50vh;
-	margin-left: 1em;
 
 	display: flex;
 	align-items: center;
 }
 
-main div {
-	margin: 0 1em 0 1em;
+main>div {
+	display: none;
+}
+
+#smallMain {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	font-size: 80px;
+}
+
+#smallMain div img{
+	display: block;
 }
 
 .planet {
-	transition: all 0.3s
+	transition: all 0.3s;
 }
 
 .planet:hover {
@@ -115,7 +128,7 @@ main div {
 }
 
 .infoTitle {
-	font-size: 8px;
+	font-size: 7px;
 	text-align: center;
 }
 
@@ -208,6 +221,7 @@ main div {
 
 	ul ul {
 		display: flex;
+		justify-content: center;
 	}
 
 	ul li:hover ul {
@@ -230,31 +244,31 @@ main div {
 	}
 }
 
-/* resizes the top navigation bar size */
+/* removes top navigation bar and displays planets */
 @media screen and (min-width: 650px) {
+	/* Top Section */
 	.topNav {
-		height: 38px;
+		display: none;
 	}
 
 	li a {
 		padding: 9px 8px 8px 9px;
 		font-size: 14px;
 	}
+
+	/* Middle Section */
+	main div {
+		display: block;
+		margin: 0 1em 0 1em;
+	}
+
+	#smallMain {
+		display: none;
+	}
 }
 
-/* resizes the top navigation bar size */
 /* resizes the main info planet image, main info title & main info facts */
 @media screen and (min-width: 750px) {
-  	/* Top Section */
-	.topNav {
-		height: 43px;
-	}
-
-	li a {
-		padding: 10px 11px 9px 11px;
-		font-size: 16px;
-	}
-
 	/* Bottom Section */
 	.infoTitle {
 		font-size: 18px;
@@ -271,26 +285,15 @@ main div {
 	}
 }
 
-/* resizes the top navigation bar size */
 /* resizes the main info planet image, main info title & main info facts */
 @media screen and (min-width: 950px) {
-  	/* Top Section */
-  	.topNav {
-		height: 44px;
-	}
-
-	li a {
-		padding: 10px 19px 9px 19px;
-		font-size: 17px;
-	}
-
 	/* Bottom Section */
 	.infoTitle {
 		font-size: 23px;
 	}
 
 	.infoMain {
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.infoPlanet {
@@ -300,43 +303,51 @@ main div {
 	}
 }
 
+/* resizes the main info planet image, main info title & main info facts */
+@media screen and (min-width: 1000px) {
+	/* Bottom Section */
+	.infoMain {
+		font-size: 18px;
+	}
+}
+
 /* Planet Sizes */
-main div:first-child {
+main>div:first-child {
 	width: 320px;	/* sun */
 }
 
-main div:nth-child(2) {
+main>div:nth-child(2) {
 	width: 120px;	/* mercury */
 }
 
-main div:nth-child(3) {
+main>div:nth-child(3) {
 	width: 140px;	/* venus */
 }
 
-main div:nth-child(4) {
+main>div:nth-child(4) {
 	width: 150px;	/* earth */
 }
 
-main div:nth-child(5) {
+main>div:nth-child(5) {
 	width: 130px;	/* mars */
 }
 
-main div:nth-child(6) {
+main>div:nth-child(6) {
 	width: 230px;	/* jupiter */
 }
 
-main div:nth-child(7) {
+main>div:nth-child(7) {
 	width: 370px;	/* saturn */
 }
 
-main div:nth-child(8) {
+main>div:nth-child(8) {
 	width: 190px;	/* uranus */
 }
 
-main div:nth-child(9) {
+main>div:nth-child(9) {
 	width: 182px;	/* neptune */
 }
 
-main div:nth-child(10) {
+main>div:nth-child(10) {
 	width: 96px;	/* pluto */
 }
